@@ -15,11 +15,17 @@ class ApiController extends Controller
         $admin = new Admission;
         $user = new User;
 
-        $validate = Validator::make($request->all(), [
-            'fname' => 'required|unique:admission'
+        $valid = Validator::make($request->all(), [
+            'regnumb' => 'required|unique:admissions',
+            'fname'=> 'required',
+            'lname'=> 'required',
+            'father'=> 'required',
+            'dob'=> 'required',
+            'class'=> 'required',
+            'section'=> 'required',
         ]);
 
-        $admin->regnumb = 'pls-'.date('y').rand(111,999);
+        $admin->regnumb =$request->regnumb;
         $admin->fname = $request->fname;
         $admin->lname = $request->lname;
         $admin->father = $request->father;
@@ -28,16 +34,15 @@ class ApiController extends Controller
         $admin->admnyr = $request->year;
         $admin->class = $request->class;
         $admin->section = $request->section;
-        $admin->prevskol = $request->rpevskol;
+        $admin->prevskol = $request->prevskol;
         $admin->reason = $request->reson;
         $admin->religion = $request->religion;
         $admin->referby = $request->referer;
         $admin->img = $request->img;
 
-        if($validate->fails()){
+        if($valid->fails()){
             return response()->json([
-                'error'=>$validate->errors(),
-
+                'error'=>$valid->errors(),
             ]);
         }else{
             $save1 = $admin->save();
@@ -50,7 +55,8 @@ class ApiController extends Controller
             }else{
                 return array('failed' => 'failed to create new account');
             }
-        }
+        }        
+        
     }
 
 }
