@@ -14,8 +14,4 @@ use App\User;
 |
 */
 
-Route::get('/test', function(){
-    $user = User::all();
-    $arr = array('users'=>$user);
-    return $arr;
-});
+Route::post('admission', 'ApiController@admission');
