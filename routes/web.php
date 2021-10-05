@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function(){
+    return view('welcome');
+});
+
+// login 
+Route::get('/login', 'LoginController@index');
+Route::post('/login', 'LoginController@login');
+Route::get('/logout', 'LoginController@logout');
+
+//dashboard
+Route::get('/dashboard', function(){
     return view('welcome');
 });
