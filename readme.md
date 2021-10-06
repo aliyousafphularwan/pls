@@ -1,1 +1,1 @@
-** Paperless Schooling **
+<strong>Paperless Schooling</strong>
