@@ -17,45 +17,45 @@
                         <li class="nav-item">
                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-graduation-cap"></i> <span class="mini-dn">Students</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                <a href="#" class="dropdown-item">Admission</a>
-                                <a href="#" class="dropdown-item">Students List</a>
+                                <a href="{{ url('/student/new') }}" class="dropdown-item">Admission</a>
+                                <a href="{{ url('/student/list') }}" class="dropdown-item">Students List</a>
                             </div>
                         </li>
                         <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-envelope"></i> <span class="mini-dn">Staff</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                <a href="#" class="dropdown-item">New Staff</a>
-                                <a href="#" class="dropdown-item">Staff List</a>
+                                <a href="{{ url('/staff/') }}" class="dropdown-item">New Staff</a>
+                                <a href="{{ url('/staff') }}" class="dropdown-item">Staff List</a>
                             </div>
                         </li>
                         <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-flask"></i> <span class="mini-dn">Classes</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                <a href="#" class="dropdown-item">Add Class</a>
-                                <a href="#" class="dropdown-item">Add Section</a>
+                                <a href="{{ url('/class/') }}" class="dropdown-item">Add Class</a>
+                                <a href="{{ url('/section/') }}" class="dropdown-item">Add Section</a>
                             </div>
                         </li>
                         <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-pie-chart"></i> <span class="mini-dn">Exams & Datesheet</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                <a href="#" class="dropdown-item">Datesheet</a>
+                                <a href="{{ url('/exam/datesheet') }}" class="dropdown-item">Datesheet</a>
                             </div>
                         </li>
                         <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Results</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown chart-left-menu-std animated flipInX">
-                                <a href="#" class="dropdown-item">Results</a>
-                                <a href="#" class="dropdown-item">Summary Sheet</a>
+                                <a href="{{ url('/result/') }}" class="dropdown-item">Results</a>
+                                <a href="{{ url('/result/summary') }}" class="dropdown-item">Summary Sheet</a>
                             </div>
                         </li>
                         <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-table"></i> <span class="mini-dn">Accounts</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                <a href="#" class="dropdown-item">Heads</a>
-                                <a href="#" class="dropdown-item">Vouchers</a>
-                                <a href="#" class="dropdown-item">Reports</a>
+                                <a href="{{ url('/acc/heads') }}" class="dropdown-item">Heads</a>
+                                <a href="{{ url('/acc/voucher') }}" class="dropdown-item">Vouchers</a>
+                                <a href="{{ url('/acc/report') }}" class="dropdown-item">Reports</a>
                             </div>
                         </li>
                         <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-edit"></i> <span class="mini-dn">Settings</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown form-left-menu-std animated flipInX">
-                                <a href="#" class="dropdown-item">Profile</a>
-                                <a href="#" class="dropdown-item">User Management</a>
-                                <a href="#" class="dropdown-item">Set Defaults</a>
+                                <a href="{{ url('/settings/profile') }}" class="dropdown-item">Profile</a>
+                                <a href="{{ url('/settings/manage-user') }}" class="dropdown-item">User Management</a>
+                                <a href="{{ url('/settings/defaults') }}" class="dropdown-item">Set Defaults</a>
                             </div>
                         </li>
                     </ul>
@@ -78,28 +78,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-1 col-sm-1 col-xs-12">
-                                <div class="header-top-menu tabl-d-n">
-                                    {{-- <ul class="nav navbar-nav mai-top-nav">
-                                        <li class="nav-item"><a href="#" class="nav-link">Home</a>
-                                        </li>
-                                        <li class="nav-item"><a href="#" class="nav-link">About</a>
-                                        </li>
-                                        <li class="nav-item"><a href="#" class="nav-link">Services</a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Project <span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
-                                            <div role="menu" class="dropdown-menu animated flipInX">
-                                                <a href="#" class="dropdown-item">Company Info</a>
-                                                <a href="#" class="dropdown-item">Documentation</a>
-                                                <a href="#" class="dropdown-item">Expert Backend</a>
-                                                <a href="#" class="dropdown-item">Expert FrontEnd</a>
-                                                <a href="#" class="dropdown-item">Contact Support</a>
-                                            </div>
-                                        </li>
-                                        <li class="nav-item"><a href="#" class="nav-link">Support</a>
-                                        </li>
-                                    </ul> --}}
-                                </div>
+                                <div class="header-top-menu tabl-d-n"></div>
                             </div>
                             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                                 <div class="header-right-info">

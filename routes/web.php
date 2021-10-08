@@ -26,4 +26,10 @@ Route::get('/dashboard', function(){
 });
 
 // student
-Route::get('/new', 'StudentController@admission')->name('student.add');
+Route::get('/student/new', 'StudentController@admission');
+Route::get('/student/list', 'StudentController@list');
+
+// settings
+Route::get('settings/profile', 'SettingsController@profile');
+Route::get('settings/manage-user', 'SettingsController@userManage');
+Route::get('settings/defaults', 'SettingsController@defaults');
