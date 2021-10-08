@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-use App\User;
+use App\Admission;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +15,4 @@ use App\User;
 */
 
 Route::post('admission', 'ApiController@admission');
+Route::get('studentlist', 'ApiController@stdlist');

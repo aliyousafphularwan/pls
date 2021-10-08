@@ -9,7 +9,7 @@ use Validator;
 
 class ApiController extends Controller
 {
-    
+    // new admission
     public function admission(Request $request){
 
         $admin = new Admission;
@@ -57,6 +57,12 @@ class ApiController extends Controller
             }
         }        
         
+    }
+
+    // all student list
+    public function stdlist(){
+        $students = Admission::all();
+        return array('students' => response()->json($students));
     }
 
 }

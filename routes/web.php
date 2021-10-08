@@ -24,3 +24,6 @@ Route::get('/logout', 'LoginController@logout');
 Route::get('/dashboard', function(){
     return view('welcome');
 });
+
+// student
+Route::get('/new', 'StudentController@admission')->name('student.add');
